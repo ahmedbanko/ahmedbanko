@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @ahmedbanko
-- 👀 I’m interested in Software Engineering and Machine Learning.
-- 🌱 I’m currently a third year computer science student at King's College London.
+- I have graduated with a first-class degree in Computer science from King's College London.
+- I am specialised in Software engineering.
 
 <!---
 ahmedbanko/ahmedbanko is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
