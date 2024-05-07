@@ -10,7 +10,7 @@ export default {
       colors: {
         navBarText: {
           light: '#262625',
-          dark: '#ebebeb',
+          dark: '#BDBDBD',
         },
       },
     },
