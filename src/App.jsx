@@ -1,5 +1,6 @@
 import NavBar from './components/MyNavBar'
 import { useState } from 'react'
+import Projects from './components/Projects';
 
 function App() {
 
@@ -17,6 +18,9 @@ function App() {
   return (
     <>
     <NavBar toggleIsDark={handleSetDark} isDarkMode={isDark} onSelectTab={handleTabSelection} selectedTab={selectedTab}></NavBar>
+    <div className='flex justify-center items-center h-screen'>
+      <Projects/>
+    </div>
     </>
   )
 }

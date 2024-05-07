@@ -1,5 +1,5 @@
 import { IoSunny, IoMoon } from "react-icons/io5";
-import NavBarLabel from "./NavBarLabel.jsx";
+import NavBarLabel from "./NavBarLabel";
 
 
 export default function NabBar({ isDarkMode, toggleIsDark, onSelectTab, selectedTab}) {
