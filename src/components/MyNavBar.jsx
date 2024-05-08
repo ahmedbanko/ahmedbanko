@@ -14,6 +14,10 @@ export default function NabBar({
     setIsOpen((oldVal) => !oldVal);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   let colorModeBu = isDarkMode ? (
     <IoSunny
       className="text-navBarText-dark size-4.5 md:hover:fill-yellow-300"
@@ -30,31 +34,38 @@ export default function NabBar({
     ? "bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-700"
     : "bg-gradient-to-t from-zinc-300 to-zinc-200";
 
+  const handleSelectTab = (tab) => {
+    if (isOpen) {
+      closeMenu();
+    }
+    onSelectTab(tab);
+  };
+
   const navBarLabels = (
     <>
       <NavBarLabel
         text="{ A Banko }"
-        onSelectTab={onSelectTab}
+        onSelectTab={handleSelectTab}
         selectedTab={selectedTab}
       />
       <NavBarLabel
         text="projects"
-        onSelectTab={onSelectTab}
+        onSelectTab={handleSelectTab}
         selectedTab={selectedTab}
       />
       <NavBarLabel
         text="stack"
-        onSelectTab={onSelectTab}
+        onSelectTab={handleSelectTab}
         selectedTab={selectedTab}
       />
       <NavBarLabel
         text="education"
-        onSelectTab={onSelectTab}
+        onSelectTab={handleSelectTab}
         selectedTab={selectedTab}
       />
       <NavBarLabel
         text="why hire me?"
-        onSelectTab={onSelectTab}
+        onSelectTab={handleSelectTab}
         selectedTab={selectedTab}
       />
     </>
