@@ -3,7 +3,7 @@ import { useState } from "react";
 import Projects from "./components/Projects";
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const [selectedTab, setSelectedTab] = useState("projects");
 
   function handleTabSelection(target) {
@@ -31,8 +31,10 @@ function App() {
         onSelectTab={handleTabSelection}
         selectedTab={selectedTab}
       ></NavBar>
-      <div className="flex justify-center items-center my-24">
-        {contentMap[selectedTab]}
+      <div className="container mx-auto px-3 sm:px-4 lg:px-8 my-20">
+        <div className="flex-wrap p-6 rounded-xl bg-bodyBg-light bg-opacity-60 dark:bg-opacity-60 dark:bg-bodyBg-dark">
+          {contentMap[selectedTab]}
+        </div>
       </div>
     </>
   );
