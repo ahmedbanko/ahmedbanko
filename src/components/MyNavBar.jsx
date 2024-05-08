@@ -11,7 +11,7 @@ export default function NabBar({
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((oldVal) => !oldVal);
   };
 
   let colorModeBu = isDarkMode ? (
@@ -30,43 +30,44 @@ export default function NabBar({
     ? "bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-700"
     : "bg-gradient-to-t from-zinc-300 to-zinc-200";
 
-
-  const navBarLabels = <>
-   <NavBarLabel
-              text="{ A Banko }"
-              onSelectTab={onSelectTab}
-              selectedTab={selectedTab}
-            />
-            <NavBarLabel
-              text="projects"
-              onSelectTab={onSelectTab}
-              selectedTab={selectedTab}
-            />
-            <NavBarLabel
-              text="stack"
-              onSelectTab={onSelectTab}
-              selectedTab={selectedTab}
-            />
-            <NavBarLabel
-              text="education"
-              onSelectTab={onSelectTab}
-              selectedTab={selectedTab}
-            />
-            <NavBarLabel
-              text="why hire me?"
-              onSelectTab={onSelectTab}
-              selectedTab={selectedTab}
-            />
-  </>
+  const navBarLabels = (
+    <>
+      <NavBarLabel
+        text="{ A Banko }"
+        onSelectTab={onSelectTab}
+        selectedTab={selectedTab}
+      />
+      <NavBarLabel
+        text="projects"
+        onSelectTab={onSelectTab}
+        selectedTab={selectedTab}
+      />
+      <NavBarLabel
+        text="stack"
+        onSelectTab={onSelectTab}
+        selectedTab={selectedTab}
+      />
+      <NavBarLabel
+        text="education"
+        onSelectTab={onSelectTab}
+        selectedTab={selectedTab}
+      />
+      <NavBarLabel
+        text="why hire me?"
+        onSelectTab={onSelectTab}
+        selectedTab={selectedTab}
+      />
+    </>
+  );
 
   return (
     <nav className={`p-4 ${navBarBgColor}`}>
-       <div className="flex  justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex  justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
           <div className="flex items-center">
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-              {navBarLabels}
+                {navBarLabels}
               </div>
             </div>
           </div>
@@ -84,18 +85,14 @@ export default function NabBar({
             </button>
           </div>
         </div>
-        <div className="flex items-center">
-          {!isOpen && colorModeBu}
-        </div>
+        <div className="flex items-center">{!isOpen && colorModeBu}</div>
       </div>
 
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navBarLabels}
-          </div>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">{navBarLabels}</div>
         </div>
       )}
-      </nav>
+    </nav>
   );
 }

@@ -5,7 +5,7 @@ import About from "./components/About";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
-  const [selectedTab, setSelectedTab] = useState("projects");
+  const [selectedTab, setSelectedTab] = useState("{ A Banko }");
 
   function handleTabSelection(target) {
     setSelectedTab(target);
