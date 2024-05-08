@@ -26,11 +26,11 @@ export default function NabBar({ isDarkMode, toggleIsDark, onSelectTab, selected
           <li>
           <a className="whitespace-nowrap text-l font-bold tracking-tighter text-black font-sans"></a>
           </li>
-          <NavBarLabel text="{ A Banko }" onSelectTab={onSelectTab} isDarkMode={isDarkMode} selectedTab={selectedTab}/>
-          <NavBarLabel text="projects" onSelectTab={onSelectTab} isDarkMode={isDarkMode} selectedTab={selectedTab}/>
-          <NavBarLabel text="stack" onSelectTab={onSelectTab} isDarkMode={isDarkMode} selectedTab={selectedTab}/>
-          <NavBarLabel text="education" onSelectTab={onSelectTab} isDarkMode={isDarkMode} selectedTab={selectedTab}/>
-          <NavBarLabel text="why hire me?" onSelectTab={onSelectTab} isDarkMode={isDarkMode} selectedTab={selectedTab}/>
+          <NavBarLabel text="{ A Banko }" onSelectTab={onSelectTab} selectedTab={selectedTab}/>
+          <NavBarLabel text="projects" onSelectTab={onSelectTab} selectedTab={selectedTab}/>
+          <NavBarLabel text="stack" onSelectTab={onSelectTab} selectedTab={selectedTab}/>
+          <NavBarLabel text="education" onSelectTab={onSelectTab} selectedTab={selectedTab}/>
+          <NavBarLabel text="why hire me?" onSelectTab={onSelectTab}  selectedTab={selectedTab}/>
         </ul>
         <div className="container mx-auto flex justify-end items-center">
           {colorModeBu}
