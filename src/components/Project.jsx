@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 export default function Project({ project }) {
   return (
     <li className="container mx-auto">
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap justify-between md:space-x-10">
         <div className="flex">
          <div className="container mx-auto">
          <a

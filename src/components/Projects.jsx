@@ -3,7 +3,7 @@ import Project from "./Project";
 export default function Projects() {
   return (
     <div>
-      <h1 className="md:px-8 px-4 inline-block text-2xl sm:text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
+      <h1 className="inline-block text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
         Projects
       </h1>
       <ul className="space-y-4">

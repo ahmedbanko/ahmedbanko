@@ -31,8 +31,8 @@ function App() {
         onSelectTab={handleTabSelection}
         selectedTab={selectedTab}
       ></NavBar>
-      <div className="container mx-auto px-3 sm:px-4 lg:px-8 my-20">
-        <div className="flex-wrap p-6 rounded-xl bg-bodyBg-light bg-opacity-60 dark:bg-opacity-60 dark:bg-bodyBg-dark">
+      <div className="flex flex-wrap justify-center px-3 sm:px-4 lg:px-8 my-10 md:my-20">
+        <div className="flex flex-wrap p-6 rounded-xl bg-bodyBg-light bg-opacity-60 dark:bg-opacity-60 dark:bg-bodyBg-dark">
           {contentMap[selectedTab]}
         </div>
       </div>
