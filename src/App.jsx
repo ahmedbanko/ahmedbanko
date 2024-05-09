@@ -1,11 +1,21 @@
 import NavBar from "./components/MyNavBar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Projects from "./components/Projects";
 import About from "./components/About";
+import { ABOUT_STATEMENT } from "./data";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
   const [selectedTab, setSelectedTab] = useState("{ A Banko }");
+  const [aboutTabIsLoaded, setAboutIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // This effect will run after the About component has rendered
+    const timer = setTimeout(() => {
+      setAboutIsLoaded(true);
+    }, ABOUT_STATEMENT.length * 30);
+    return () => clearTimeout(timer);
+  }, []);
 
   function handleTabSelection(target) {
     setSelectedTab(target);
@@ -17,7 +27,7 @@ function App() {
   }
 
   const contentMap = {
-    "{ A Banko }": <About />,
+    "{ A Banko }": <About loaded={aboutTabIsLoaded} />,
     projects: <Projects />,
     // stack: <Stack/>,
     // education: <Education/>,
@@ -38,9 +48,7 @@ function App() {
             <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
               {selectedTab.toUpperCase()}
             </h1>
-            <div className="max-w-3xl">
-              {contentMap[selectedTab]}
-            </div>
+            <div className="max-w-3xl">{contentMap[selectedTab]}</div>
           </div>
         </div>
       </div>
