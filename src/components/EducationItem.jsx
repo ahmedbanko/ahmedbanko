@@ -36,10 +36,10 @@ export default function EducationItem({ item }) {
           </button>
         )}
         {showModules && modules && (
-          <ul className="mt-2">
+          <ul className="mt-2 space-y-1">
             {modules.map((module, index) => (
               <li key={index} className="text-sm text-bodyText-secondaryLight dark:text-bodyText-secondaryDark">
-                {module}
+                &#8226; {module}
               </li>
             ))}
           </ul>
