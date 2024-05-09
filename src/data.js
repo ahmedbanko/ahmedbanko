@@ -136,6 +136,13 @@ export const STACK_ITEMS = [
 
     },
     {
+        title: "Figma",
+        subtitle: "My go-to tool to visualizing and prototyping my ideas",
+        imgName: "figma-logo.png",
+        url: "https://www.figma.com",
+
+    },
+    {
         title: "Tailwind",
         subtitle: "The CSS framework that's all about utility",
         imgName: "tailwind-logo.png",

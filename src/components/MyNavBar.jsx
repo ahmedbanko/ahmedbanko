@@ -3,7 +3,6 @@ import { IoSunny, IoMoon, IoMenu, IoClose } from "react-icons/io5";
 import NavBarLabel from "./NavBarLabel";
 
 export default function NabBar({
-  isDarkMode,
   toggleIsDark,
   onSelectTab,
   selectedTab,
@@ -17,18 +16,6 @@ export default function NabBar({
   const closeMenu = () => {
     setIsOpen(false);
   };
-
-  let colorModeBu = isDarkMode ? (
-    <IoSunny
-      className="text-navBarText-dark size-4.5 md:hover:fill-yellow-300"
-      onClick={toggleIsDark}
-    />
-  ) : (
-    <IoMoon
-      className="text-navBarText-light size-4.5 md:hover:fill-yellow-300"
-      onClick={toggleIsDark}
-    />
-  );
 
   const handleSelectTab = (tab) => {
     if (isOpen) {
@@ -97,7 +84,19 @@ export default function NabBar({
             </button>
           </div>
         </div>
-        <div className="flex items-center">{!isOpen && colorModeBu}</div>
+        <div className="flex items-center">{!isOpen && (
+          <>
+           <IoSunny
+           className="text-navBarText-dark size-4.5 md:hover:fill-yellow-300 hidden dark:block"
+           onClick={toggleIsDark}
+         />
+         <IoMoon
+           className="text-navBarText-light size-4.5 md:hover:fill-yellow-300 block dark:hidden"
+           onClick={toggleIsDark}
+         />
+          </>
+          
+        )}</div>
       </div>
 
       {isOpen && (

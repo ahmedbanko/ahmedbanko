@@ -33,13 +33,13 @@ function App() {
     stack: <Stack />,
     // education: <Education/>,
     // "why hire me?": <WhyMe/>,
+    // "contact": <Contact/>,
   };
 
   return (
     <>
       <NavBar
         toggleIsDark={handleSetDark}
-        isDarkMode={isDark}
         onSelectTab={handleTabSelection}
         selectedTab={selectedTab}
       />
