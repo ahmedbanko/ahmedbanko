@@ -1,5 +1,6 @@
 import Typewriter from "./Typewriter";
 import { ABOUT_STATEMENT } from "../data.js";
+import { Fragment } from "react";
 
 export default function About({loaded}) {
   return (
@@ -9,10 +10,10 @@ export default function About({loaded}) {
       ) : (
         <span className="text-bodyText-primaryLight dark:text-bodyText-primaryDark">
           {ABOUT_STATEMENT.split("\n").map((line, index) => (
-            <>
+            <Fragment key={index}>
               {line}
               {index !== ABOUT_STATEMENT.split("\n").length - 1 && <br />}
-            </>
+            </Fragment>
           ))}
         </span>
       )}

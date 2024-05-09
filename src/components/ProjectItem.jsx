@@ -3,7 +3,7 @@ import { TbAlpha } from "react-icons/tb";
 import { RiGitRepositoryPrivateLine } from "react-icons/ri";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-export default function Project({ project }) {
+export default function ProjectItem({ project }) {
 
     
   return (

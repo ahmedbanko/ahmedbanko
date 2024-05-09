@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import { ABOUT_STATEMENT } from "./data";
+import Stack from "./components/Stack";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -29,7 +30,7 @@ function App() {
   const contentMap = {
     "{ A Banko }": <About loaded={aboutTabIsLoaded} />,
     projects: <Projects />,
-    // stack: <Stack/>,
+    stack: <Stack/>,
     // education: <Education/>,
     // "why hire me?": <WhyMe/>,
   };
@@ -48,7 +49,7 @@ function App() {
             <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
               {selectedTab.toUpperCase()}
             </h1>
-            <div className="max-w-3xl">{contentMap[selectedTab]}</div>
+            <div className="max-w-3xl h-[27rem] md:h-[22.5rem] h-max-h-screen overflow-auto">{contentMap[selectedTab]}</div>
           </div>
         </div>
       </div>
