@@ -91,7 +91,7 @@ export default function NabBar({
            onClick={toggleIsDark}
          />
          <IoMoon
-           className="text-navBarText-light size-4.5 md:hover:fill-yellow-300 block dark:hidden"
+           className="text-navBarText-light size-4.5 md:hover:fill-blue-800 block dark:hidden"
            onClick={toggleIsDark}
          />
           </>

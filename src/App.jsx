@@ -4,6 +4,7 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import { ABOUT_STATEMENT } from "./data";
 import Stack from "./components/Stack";
+import Education from "./components/Education";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -31,7 +32,7 @@ function App() {
     "{ A Banko }": <About loaded={aboutTabIsLoaded} />,
     projects: <Projects />,
     stack: <Stack />,
-    // education: <Education/>,
+    education: <Education/>,
     // "why hire me?": <WhyMe/>,
     // "contact": <Contact/>,
   };
