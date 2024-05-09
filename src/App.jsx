@@ -5,6 +5,8 @@ import About from "./components/About";
 import { ABOUT_STATEMENT } from "./data";
 import Stack from "./components/Stack";
 import Education from "./components/Education";
+import WhyMe from "./components/WhyMe";
+import Contact from "./components/Contact";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -33,8 +35,8 @@ function App() {
     projects: <Projects />,
     stack: <Stack />,
     education: <Education/>,
-    // "why hire me?": <WhyMe/>,
-    // "contact": <Contact/>,
+    "why hire me?": <WhyMe/>,
+    "contact": <Contact/>,
   };
 
   return (
