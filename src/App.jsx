@@ -30,7 +30,7 @@ function App() {
   const contentMap = {
     "{ A Banko }": <About loaded={aboutTabIsLoaded} />,
     projects: <Projects />,
-    stack: <Stack/>,
+    stack: <Stack />,
     // education: <Education/>,
     // "why hire me?": <WhyMe/>,
   };
@@ -42,14 +42,14 @@ function App() {
         isDarkMode={isDark}
         onSelectTab={handleTabSelection}
         selectedTab={selectedTab}
-      ></NavBar>
+      />
       <div className="flex justify-center my-10 md:my-20">
-        <div className="w-screen max-w-3xl mx-4 md:mx-0">
-          <div className="p-6 rounded-xl bg-bodyBg-light bg-opacity-60 dark:bg-opacity-60 dark:bg-bodyBg-dark">
-            <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
-              {selectedTab.toUpperCase()}
-            </h1>
-            <div className="max-w-3xl h-[27rem] md:h-[22.5rem] h-max-h-screen overflow-auto">{contentMap[selectedTab]}</div>
+        <div className="w-screen max-w-3xl mx-4 md:mx-0 p-6 rounded-xl bg-bodyBg-light bg-opacity-60 dark:bg-opacity-60 dark:bg-bodyBg-dark">
+          <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
+            {selectedTab.toUpperCase()}
+          </h1>
+          <div className="max-w-3xl h-[27rem] md:h-[22.5rem] h-max-h-screen overflow-auto">
+            {contentMap[selectedTab]}
           </div>
         </div>
       </div>

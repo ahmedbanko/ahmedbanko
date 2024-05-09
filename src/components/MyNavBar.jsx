@@ -30,10 +30,6 @@ export default function NabBar({
     />
   );
 
-  let navBarBgColor = isDarkMode
-    ? "bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-700"
-    : "bg-gradient-to-t from-zinc-300 to-zinc-200";
-
   const handleSelectTab = (tab) => {
     if (isOpen) {
       closeMenu();
@@ -68,11 +64,16 @@ export default function NabBar({
         onSelectTab={handleSelectTab}
         selectedTab={selectedTab}
       />
+      <NavBarLabel
+        text="contact"
+        onSelectTab={handleSelectTab}
+        selectedTab={selectedTab}
+      />
     </>
   );
 
   return (
-    <nav className={`p-4 ${navBarBgColor}`}>
+    <nav className={"p-4 dark:bg-gradient-to-r dark:from-custom-gradient-dark-start dark:via-custom-gradient-dark-via dark:to-custom-gradient-dark-end bg-gradient-to-t from-custom-gradient-light-start to-custom-gradient-light-end"}>
       <div className="flex  justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
           <div className="flex items-center">
