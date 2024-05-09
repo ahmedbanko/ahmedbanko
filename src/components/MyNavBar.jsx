@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { IoSunny, IoMoon, IoMenu, IoClose } from "react-icons/io5";
-import NavBarLabel from "./NavBarLabel";
+import NavBarButton from "./NavBarButton";
 
 export default function NabBar({
   toggleIsDark,
@@ -24,34 +24,34 @@ export default function NabBar({
     onSelectTab(tab);
   };
 
-  const navBarLabels = (
+  const navBarButtons = (
     <>
-      <NavBarLabel
+      <NavBarButton
         text="{ A Banko }"
         onSelectTab={handleSelectTab}
         selectedTab={selectedTab}
       />
-      <NavBarLabel
+      <NavBarButton
         text="projects"
         onSelectTab={handleSelectTab}
         selectedTab={selectedTab}
       />
-      <NavBarLabel
+      <NavBarButton
         text="stack"
         onSelectTab={handleSelectTab}
         selectedTab={selectedTab}
       />
-      <NavBarLabel
+      <NavBarButton
         text="education"
         onSelectTab={handleSelectTab}
         selectedTab={selectedTab}
       />
-      <NavBarLabel
+      <NavBarButton
         text="why hire me?"
         onSelectTab={handleSelectTab}
         selectedTab={selectedTab}
       />
-      <NavBarLabel
+      <NavBarButton
         text="contact"
         onSelectTab={handleSelectTab}
         selectedTab={selectedTab}
@@ -66,7 +66,7 @@ export default function NabBar({
           <div className="flex items-center">
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                {navBarLabels}
+                {navBarButtons}
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function NabBar({
 
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">{navBarLabels}</div>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">{navBarButtons}</div>
         </div>
       )}
     </nav>
