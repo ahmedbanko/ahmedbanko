@@ -4,7 +4,7 @@ An interactive portfolio application designed to exhibit skills, projects, and p
 
 ## Demo
 
-You can find a live demo of the application [here](www.ahmedbanko.com).
+You can find a live demo of the application [HERE](https://ahmedbanko.com).
 
 ## How to Run
 
