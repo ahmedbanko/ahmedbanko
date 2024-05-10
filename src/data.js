@@ -236,12 +236,11 @@ export const EDUCATION = [
 ];
 
 export const WHY_ME = [
-    "Strong Educational Background.",
-    "Diverse Programming Skills.",
-    "Versatile Understanding of Programming Language Paradigms.",
-    "Innovative Projects.",
-    "Collaborative Team Player.",
-    "Attention to Detail.",
-    "Problem-Solving Skills.",
-    "Continuous Learning."
-  ];
+  "Strong Educational Background.",
+  "Diverse Programming Skills.",
+  "Versatile Understanding of Programming Language Paradigms.",
+  "Collaborative Team Player.",
+  "Attention to Detail.",
+  "Problem-Solving Skills.",
+  "Continuous Learning.",
+];

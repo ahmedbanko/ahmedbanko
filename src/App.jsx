@@ -34,9 +34,9 @@ function App() {
     "{ A Banko }": <About loaded={aboutTabIsLoaded} />,
     projects: <Projects />,
     stack: <Stack />,
-    education: <Education/>,
-    "why hire me?": <WhyMe/>,
-    "contact": <Contact/>,
+    education: <Education />,
+    "why hire me?": <WhyMe />,
+    contact: <Contact />,
   };
 
   return (
@@ -51,7 +51,7 @@ function App() {
           <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
             {selectedTab.toUpperCase()}
           </h1>
-          <div className="max-w-3xl h-[27rem] md:h-[22.5rem] h-max-h-screen overflow-auto">
+          <div className="max-w-3xl h-[27rem] md:h-[22.5rem] max-h-screen overflow-auto">
             {contentMap[selectedTab]}
           </div>
         </div>

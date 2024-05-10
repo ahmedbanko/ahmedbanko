@@ -16,10 +16,11 @@ const Typewriter = ({ text, delay }) => {
   }, [currentIndex, delay, text]);
 
   // Splitting text by '\n' and rendering each part in a separate <span>
-  const renderedText = currentText.split('\n').map((line, index) => (
+  const renderedText = currentText.split("\n").map((line, index) => (
     <span key={index}>
       {line}
-      {index < currentText.split('\n').length - 1 && <br />} {/* Add <br> between lines */}
+      {index < currentText.split("\n").length - 1 && <br />}{" "}
+      {/* Add <br> between lines */}
     </span>
   ));
 
