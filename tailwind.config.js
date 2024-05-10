@@ -20,15 +20,15 @@ export default {
           dark: "#000000",
         },
       },
-      gradientColorStops: theme => ({
-        'custom-gradient-dark': {
-          'start': theme('colors.zinc.900'),
-          'via': theme('colors.zinc.800'),
-          'end': theme('colors.zinc.700'),
+      gradientColorStops: (theme) => ({
+        "custom-gradient-dark": {
+          start: theme("colors.zinc.900"),
+          via: theme("colors.zinc.800"),
+          end: theme("colors.zinc.700"),
         },
-        'custom-gradient-light': {
-          'start': theme('colors.zinc.300'),
-          'end': theme('colors.zinc.200'),
+        "custom-gradient-light": {
+          start: theme("colors.zinc.300"),
+          end: theme("colors.zinc.200"),
         },
       }),
     },
@@ -36,7 +36,7 @@ export default {
   variants: {
     extend: {
       textColor: ["dark"],
-      gradientColorStops: ['dark'],
+      gradientColorStops: ["dark"],
     },
   },
   plugins: [],

@@ -2,11 +2,7 @@ import { useState } from "react";
 import { IoSunny, IoMoon, IoMenu, IoClose } from "react-icons/io5";
 import NavBarButton from "./NavBarButton";
 
-export default function NabBar({
-  toggleIsDark,
-  onSelectTab,
-  selectedTab,
-}) {
+export default function NabBar({ toggleIsDark, onSelectTab, selectedTab }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -60,7 +56,11 @@ export default function NabBar({
   );
 
   return (
-    <nav className={"p-4 dark:bg-gradient-to-r dark:from-custom-gradient-dark-start dark:via-custom-gradient-dark-via dark:to-custom-gradient-dark-end bg-gradient-to-t from-custom-gradient-light-start to-custom-gradient-light-end"}>
+    <nav
+      className={
+        "p-4 dark:bg-gradient-to-r dark:from-custom-gradient-dark-start dark:via-custom-gradient-dark-via dark:to-custom-gradient-dark-end bg-gradient-to-t from-custom-gradient-light-start to-custom-gradient-light-end"
+      }
+    >
       <div className="flex  justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
           <div className="flex items-center">
@@ -84,24 +84,27 @@ export default function NabBar({
             </button>
           </div>
         </div>
-        <div className="flex items-center">{!isOpen && (
-          <>
-           <IoSunny
-           className="text-navBarText-dark size-4.5 md:hover:fill-yellow-300 hidden dark:block"
-           onClick={toggleIsDark}
-         />
-         <IoMoon
-           className="text-navBarText-light size-4.5 md:hover:fill-blue-800 block dark:hidden"
-           onClick={toggleIsDark}
-         />
-          </>
-          
-        )}</div>
+        <div className="flex items-center">
+          {!isOpen && (
+            <>
+              <IoSunny
+                className="text-navBarText-dark size-4.5 md:hover:fill-yellow-300 hidden dark:block"
+                onClick={toggleIsDark}
+              />
+              <IoMoon
+                className="text-navBarText-light size-4.5 md:hover:fill-blue-800 block dark:hidden"
+                onClick={toggleIsDark}
+              />
+            </>
+          )}
+        </div>
       </div>
 
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">{navBarButtons}</div>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {navBarButtons}
+          </div>
         </div>
       )}
     </nav>

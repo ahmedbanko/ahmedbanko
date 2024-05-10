@@ -2,7 +2,7 @@ import Typewriter from "./Typewriter";
 import { ABOUT_STATEMENT } from "../data.js";
 import { Fragment } from "react";
 
-export default function About({loaded}) {
+export default function About({ loaded }) {
   return (
     <h1>
       {!loaded ? (

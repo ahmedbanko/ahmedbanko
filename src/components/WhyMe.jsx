@@ -3,7 +3,7 @@ import { WHY_ME } from "../data";
 export default function WhyMe() {
   return (
     <>
-      <ul>
+      <ul className="mt-5">
         {WHY_ME.map((reason, index) => (
           <li key={index}>
             <p className="text-bodyText-secondaryLight dark:text-bodyText-secondaryDark text-lg">
