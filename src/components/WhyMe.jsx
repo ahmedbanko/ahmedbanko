@@ -3,7 +3,7 @@ import { WHY_ME } from "../data";
 export default function WhyMe() {
   return (
     <>
-     <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
+      <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
         WHY HIRE ME?
       </h1>
       <ul className="mt-5">

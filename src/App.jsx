@@ -11,15 +11,6 @@ import Contact from "./components/Contact";
 function App() {
   const [isDark, setIsDark] = useState(true);
   const [selectedTab, setSelectedTab] = useState("{ A Banko }");
-  const [aboutTabIsLoaded, setAboutIsLoaded] = useState(false);
-
-  useEffect(() => {
-    // This effect will run after the About component has rendered
-    const timer = setTimeout(() => {
-      setAboutIsLoaded(true);
-    }, ABOUT_STATEMENT.length * 30);
-    return () => clearTimeout(timer);
-  }, []);
 
   function handleTabSelection(target) {
     setSelectedTab(target);
@@ -31,7 +22,7 @@ function App() {
   }
 
   const contentMap = {
-    "{ A Banko }": <About loaded={aboutTabIsLoaded} />,
+    "{ A Banko }": <About />,
     projects: <Projects />,
     stack: <Stack />,
     education: <Education />,
@@ -48,7 +39,7 @@ function App() {
       />
       <div className="flex justify-center my-10 md:my-20">
         <div className="w-screen max-w-3xl mx-4 md:mx-0 p-6 rounded-xl bg-bodyBg-light bg-opacity-90 dark:bg-opacity-90 dark:bg-bodyBg-dark mb-10 md:mb-20">
-            {contentMap[selectedTab]}
+          {contentMap[selectedTab]}
         </div>
       </div>
     </>

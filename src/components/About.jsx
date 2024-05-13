@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
-      <Typewriter text="{ A BANKO }" delay={30} />
+        <Typewriter text="{ A BANKO }" delay={30} />
       </h1>
       <span className="text-bodyText-primaryLight dark:text-bodyText-primaryDark">
         {ABOUT_STATEMENT.split("\n").map((line, index) => (
