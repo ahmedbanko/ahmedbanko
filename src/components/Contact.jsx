@@ -41,7 +41,7 @@ export default function Contact() {
           download
         >
           <IoDownload className="mr-2 size-4" />
-          Download PDF
+          Download CV
         </a>
       </div>
     </div>
