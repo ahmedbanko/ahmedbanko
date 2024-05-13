@@ -8,7 +8,7 @@ export default function About() {
       <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-6">
         <Typewriter text="{ A BANKO }" delay={30} />
       </h1>
-      <span className="text-bodyText-primaryLight dark:text-bodyText-primaryDark">
+      <span className="text-bodyText-secondaryLight dark:text-bodyText-secondaryDark">
         {ABOUT_STATEMENT.split("\n").map((line, index) => (
           <Fragment key={index}>
             {line}

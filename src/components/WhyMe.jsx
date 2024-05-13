@@ -9,7 +9,7 @@ export default function WhyMe() {
       <ul className="mt-5">
         {WHY_ME.map((reason, index) => (
           <li key={index}>
-            <p className="text-bodyText-secondaryLight dark:text-bodyText-secondaryDark text-lg">
+            <p className="text-bodyText-secondaryLight dark:text-bodyText-secondaryDark">
               <span>&#8226; </span>
               {reason}
             </p>
@@ -17,7 +17,7 @@ export default function WhyMe() {
         ))}
       </ul>
 
-      <p className="text-bodyText-secondaryLight dark:text-bodyText-secondaryDark mt-4 text-lg">
+      <p className="text-bodyText-secondaryLight dark:text-bodyText-secondaryDark mt-4">
         These points highlight my strong academic background, technical skills,
         project experience, teamwork abilities, and passion for technology,
         making me a valuable asset to any team.
