@@ -13,7 +13,7 @@ export default {
           primaryLight: "#262625",
           primaryDark: "#ebebeb",
           secondaryLight: "#262625",
-          secondaryDark: "#bababa",
+          secondaryDark: "#BDBDBD",
         },
         bodyBg: {
           light: "#EEEEEE",

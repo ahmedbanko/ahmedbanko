@@ -16,10 +16,10 @@ export default function Contact() {
       </h1>
       <div className="flex flex-col items-center justify-center gap-4 mb-2">
         <div className="flex flex-col items-center justify-center mb-5">
-          <label className="text-center text-bodyText-primaryLight dark:text-bodyText-primaryDark">
+          <label className="text-center text-bodyText-secondaryLight dark:text-bodyText-secondaryDark">
             Do you have any questions or would you like to collaborate?
           </label>
-          <label className="text-center mb-4 text-bodyText-primaryLight dark:text-bodyText-primaryDark">
+          <label className="text-center mb-4 text-bodyText-secondaryLight dark:text-bodyText-secondaryDark">
             Drop me a line via email or message.
           </label>
           <div className="flex flex-wrap grow items-center gap-4">
