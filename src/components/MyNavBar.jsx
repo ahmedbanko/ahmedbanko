@@ -58,7 +58,7 @@ export default function NabBar({ toggleIsDark, onSelectTab, selectedTab }) {
   return (
     <nav
       className={
-        "p-4 dark:bg-gradient-to-r dark:from-custom-gradient-dark-start dark:via-custom-gradient-dark-via dark:to-custom-gradient-dark-end bg-gradient-to-t from-custom-gradient-light-start to-custom-gradient-light-end"
+        "p-4 dark:bg-gradient-to-r dark:from-custom-gradient-dark-start dark:via-custom-gradient-dark-via dark:to-custom-gradient-dark-end bg-gradient-to-r from-custom-gradient-light-start to-custom-gradient-light-end"
       }
     >
       <div className="flex  justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,7 +73,7 @@ export default function NabBar({ toggleIsDark, onSelectTab, selectedTab }) {
           <div className="flex md:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center rounded-md text-navBarText-light dark:text-navBarText-dark md:hover:text-white md:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              className="inline-flex items-center justify-center rounded-md text-navBarText-light dark:text-navBarText-dark md:hover:text-white md:hover:bg-gray-700 focus:outline-none"
               aria-expanded="false"
             >
               {isOpen ? (
@@ -92,7 +92,7 @@ export default function NabBar({ toggleIsDark, onSelectTab, selectedTab }) {
                 onClick={toggleIsDark}
               />
               <IoMoon
-                className="text-navBarText-light size-4.5 md:hover:fill-blue-800 block dark:hidden"
+                className="text-navBarText-light size-4.5 md:hover:fill-zinc-900 block dark:hidden"
                 onClick={toggleIsDark}
               />
             </>
