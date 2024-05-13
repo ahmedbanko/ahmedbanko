@@ -10,12 +10,12 @@ export default function Contact() {
   const iconClass =
     "cursor-pointer text-bodyText-secondaryLight dark:text-bodyText-secondaryDark";
   return (
-    <div className="mb-5">
-      <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark">
+    <div>
+      <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-5">
         CONTACT
       </h1>
-      <div className="flex flex-col items-center justify-center gap-4">
-        <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center gap-4 mb-2">
+        <div className="flex flex-col items-center justify-center mb-5">
           <label className="text-center text-bodyText-primaryLight dark:text-bodyText-primaryDark">
             Do you have any questions or would you like to collaborate?
           </label>
