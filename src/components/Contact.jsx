@@ -10,7 +10,7 @@ export default function Contact() {
   const iconClass =
     "cursor-pointer text-bodyText-secondaryLight dark:text-bodyText-secondaryDark";
   return (
-    <div className="">
+    <div>
       <h1 className="text-3xl font-extrabold text-bodyText-primaryLight tracking-tight dark:text-bodyText-primaryDark mb-5">
         CONTACT
       </h1>
