@@ -6,18 +6,25 @@ export default {
     extend: {
       colors: {
         navBarText: {
-          light: "#262625",
+          light: "#EEEEEE",
           dark: "#BDBDBD",
         },
         bodyText: {
-          primaryLight: "#1a1a1a",
+          primaryLight: "#262625",
           primaryDark: "#ebebeb",
-          secondaryLight: "#333333",
+          secondaryLight: "#262625",
           secondaryDark: "#bababa",
         },
         bodyBg: {
-          light: "#a5a5a5",
+          light: "#EEEEEE",
           dark: "#000000",
+        },
+        gradient: {
+          lightStart: "#176B87",
+          lightEnd: "#053B50",
+          darkStart: "colors.zinc.900",
+          darkVia: "colors.zinc.800",
+          darkEnd: "colors.zinc.700",
         },
       },
       gradientColorStops: (theme) => ({
@@ -27,8 +34,8 @@ export default {
           end: theme("colors.zinc.700"),
         },
         "custom-gradient-light": {
-          start: theme("colors.zinc.300"),
-          end: theme("colors.zinc.200"),
+          start: "#176B87",
+          end: "#053B50",
         },
       }),
     },

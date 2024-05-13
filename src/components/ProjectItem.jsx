@@ -27,7 +27,7 @@ export default function ProjectItem({ project }) {
         </div>
         {project.sourceCode ? (
           <button
-            className="flex min-w-32 max-h-8 min-h-6 text-xs items-center bg-stone-300 text-gray-950 rounded-full px-4 py-2 hover:bg-gray-600 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-600"
+            className="flex min-w-32 max-h-8 min-h-6 text-xs items-center bg-gray-400 text-gray-950 hover:text-navBarText-light rounded-full px-4 py-2 hover:bg-gradient-lightStart dark:bg-gray-800 dark:text-white dark:hover:bg-gray-600"
             onClick={() => window.open(project.sourceCode, "_blank")}
           >
             <FaGithub className="mr-2 size-4" />
@@ -35,7 +35,7 @@ export default function ProjectItem({ project }) {
           </button>
         ) : project.url ? (
           <button
-            className="flex justify-center min-w-32 max-h-8 min-h-6 text-xs bg-stone-300 dark:bg-gray-800 text-gray-950 rounded-full py-2 dark:text-white"
+            className="flex justify-center min-w-32 max-h-8 min-h-6 text-xs bg-gray-300 dark:bg-gray-800 text-gray-950 rounded-full py-2 dark:text-white"
             disabled
           >
             <RiGitRepositoryPrivateLine className="mr-1 size-4" />
@@ -43,7 +43,7 @@ export default function ProjectItem({ project }) {
           </button>
         ) : (
           <button
-            className="flex justify-center min-w-32 max-h-8 min-h-6 text-xs bg-stone-300 dark:bg-gray-800 text-gray-950 rounded-full py-2 dark:text-white"
+            className="flex justify-center min-w-32 max-h-8 min-h-6 text-xs bg-gray-300 dark:bg-gray-800 text-gray-950 rounded-full py-2 dark:text-white"
             disabled
           >
             <TbAlpha className="mr-1 size-4" />

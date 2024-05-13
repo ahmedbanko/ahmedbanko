@@ -1,6 +1,6 @@
 export default function NavBarButton({ text, onSelectTab, selectedTab }) {
   let labelClass =
-    "block whitespace-nowrap pb-0.5 hover:text-blue-800 text-md text-navBarText-light dark:text-navBarText-dark";
+    "block whitespace-nowrap pb-0.5 hover:text-zinc-800 dark:hover:text-cyan-700 text-md text-navBarText-light dark:text-navBarText-dark";
   labelClass +=
     selectedTab === text ? " underline decoration-2 underline-offset-4" : "";
 
