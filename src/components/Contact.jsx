@@ -4,7 +4,7 @@ import {
   IoLogoGithub,
   IoDownload,
 } from "react-icons/io5";
-import CV from "/CV.pdf";
+import CV from "/A_Banko_CV.pdf";
 
 export default function Contact() {
   const iconClass =
