@@ -20,7 +20,7 @@ export default function ProjectItem({ project }) {
               </div>
             </a>
             <p
-              className="text-sm text-bodyText-secondaryLight dark:text-bodyText-secondaryDark"
+              className="text-sm max-w-lg text-bodyText-secondaryLight dark:text-bodyText-secondaryDark"
               dangerouslySetInnerHTML={{ __html: project.description }}
             ></p>
           </div>
