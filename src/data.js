@@ -1,4 +1,10 @@
 export const PROJECTS = [
+   {
+    title: "Queue app",
+    description: "A web app to join queues, avoid cold/boiling waiting area and be on time. Under construction using React.js, Express.js, Node.js, MongoDB",
+    url: null,
+    sourceCode: null,
+  },
   {
     title: "N-lineShop",
     description: "Ecommerce website & business invoicing tool.",
