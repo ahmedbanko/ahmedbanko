@@ -1,5 +1,5 @@
-import { EDUCATION } from "../data";
-import EducationItem from "./EducationItem";
+import { EDUCATION } from "../../data";
+import EducationItem from "../EducationItem";
 
 export default function Education() {
   return (

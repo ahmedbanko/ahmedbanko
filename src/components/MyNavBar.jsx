@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { IoSunny, IoMoon, IoMenu, IoClose } from "react-icons/io5";
 import NavBarButton from "./NavBarButton";
+import { useTheme } from "../context/ThemeContext";
+import { NavLink } from "react-router-dom";
 
-export default function NabBar({ toggleIsDark, onSelectTab, selectedTab }) {
+export default function NabBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,45 +15,53 @@ export default function NabBar({ toggleIsDark, onSelectTab, selectedTab }) {
     setIsOpen(false);
   };
 
-  const handleSelectTab = (tab) => {
-    if (isOpen) {
-      closeMenu();
-    }
-    onSelectTab(tab);
-  };
+  const { toggleIsDark } = useTheme();
+  function handleThemeToggle() {
+    toggleIsDark((prevVal) => !prevVal);
+  }
+  const navLinkClass =
+    "block whitespace-nowrap pb-0.5 hover:text-zinc-800 dark:hover:text-cyan-700 text-md text-navBarText-light dark:text-navBarText-dark";
+  const navLinkActiveClass = "underline decoration-2 underline-offset-4";
 
   const navBarButtons = (
     <>
-      <NavBarButton
-        text="{ A Banko }"
-        onSelectTab={handleSelectTab}
-        selectedTab={selectedTab}
-      />
-      <NavBarButton
-        text="projects"
-        onSelectTab={handleSelectTab}
-        selectedTab={selectedTab}
-      />
-      <NavBarButton
-        text="stack"
-        onSelectTab={handleSelectTab}
-        selectedTab={selectedTab}
-      />
-      <NavBarButton
-        text="education"
-        onSelectTab={handleSelectTab}
-        selectedTab={selectedTab}
-      />
-      <NavBarButton
-        text="why hire me?"
-        onSelectTab={handleSelectTab}
-        selectedTab={selectedTab}
-      />
-      <NavBarButton
-        text="contact"
-        onSelectTab={handleSelectTab}
-        selectedTab={selectedTab}
-      />
+       <NavLink
+        to="/"
+        className={({isActive}) => isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass}
+      >
+        {"{ A Banko }"}
+      </NavLink>
+
+      <NavLink
+        to="/projects"
+        className={({isActive}) => isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass}
+      >
+        {"Projects"}
+      </NavLink>
+      <NavLink
+        to="/stack"
+        className={({isActive}) => isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass}
+      >
+        {"Stack"}
+      </NavLink>
+      <NavLink
+        to="/education"
+        className={({isActive}) => isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass}
+      >
+        {"Education"}
+      </NavLink>
+      <NavLink
+        to="/why-me"
+        className={({isActive}) => isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass}
+      >
+        {"Why hire me?"}
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className={({isActive}) => isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass}
+      >
+        {"Contact"}
+      </NavLink>
     </>
   );
 
@@ -89,11 +99,11 @@ export default function NabBar({ toggleIsDark, onSelectTab, selectedTab }) {
             <>
               <IoSunny
                 className="text-navBarText-dark size-4.5 md:hover:fill-yellow-300 hidden dark:block"
-                onClick={toggleIsDark}
+                onClick={handleThemeToggle}
               />
               <IoMoon
                 className="text-navBarText-light size-4.5 md:hover:fill-zinc-900 block dark:hidden"
-                onClick={toggleIsDark}
+                onClick={handleThemeToggle}
               />
             </>
           )}
