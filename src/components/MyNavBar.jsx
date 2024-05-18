@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { IoSunny, IoMoon, IoMenu, IoClose } from "react-icons/io5";
-import NavBarButton from "./NavBarButton";
 import { useTheme } from "../context/ThemeContext";
 import { NavLink } from "react-router-dom";
 
@@ -12,7 +11,9 @@ export default function NabBar() {
   };
 
   const closeMenu = () => {
-    setIsOpen(false);
+    if(isOpen){
+      setIsOpen(false);
+    }
   };
 
   const { toggleIsDark } = useTheme();
@@ -27,6 +28,7 @@ export default function NabBar() {
     <>
        <NavLink
         to="/"
+        onClick={closeMenu}
         className={({isActive}) => isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass}
       >
         {"{ A Banko }"}
@@ -34,30 +36,35 @@ export default function NabBar() {
 
       <NavLink
         to="/projects"
+        onClick={closeMenu}
         className={({isActive}) => isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass}
       >
         {"Projects"}
       </NavLink>
       <NavLink
         to="/stack"
+        onClick={closeMenu}
         className={({isActive}) => isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass}
       >
         {"Stack"}
       </NavLink>
       <NavLink
         to="/education"
+        onClick={closeMenu}
         className={({isActive}) => isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass}
       >
         {"Education"}
       </NavLink>
       <NavLink
         to="/why-me"
+        onClick={closeMenu}
         className={({isActive}) => isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass}
       >
         {"Why hire me?"}
       </NavLink>
       <NavLink
         to="/contact"
+        onClick={closeMenu}
         className={({isActive}) => isActive ? `${navLinkClass} ${navLinkActiveClass}` : navLinkClass}
       >
         {"Contact"}

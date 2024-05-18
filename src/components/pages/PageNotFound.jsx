@@ -11,11 +11,9 @@ export default function PageNotFound() {
         <p className="text-bodyText-secondaryLight dark:text-bodyText-secondaryDark my-4">
           The entered url is either misspelt or does not exist.
         </p>
-        <Link to="/">
-          <a className="flex w-24 max-h-8 min-h-6 text-xs items-center bg-gray-400 text-gray-950 hover:text-navBarText-light rounded-full px-4 py-2 hover:bg-gradient-lightStart dark:bg-gray-800 dark:text-white dark:hover:bg-gray-600">
+        <Link to="/" className="flex w-24 max-h-8 min-h-6 text-xs items-center bg-gray-400 text-gray-950 hover:text-navBarText-light rounded-full px-4 py-2 hover:bg-gradient-lightStart dark:bg-gray-800 dark:text-white dark:hover:bg-gray-600">
             <IoHome className="mr-2 size-4" />
             Home
-          </a>
         </Link>
       </div>
     </>

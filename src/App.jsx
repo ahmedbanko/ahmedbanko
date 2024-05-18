@@ -1,6 +1,5 @@
 import NavBar from "./components/MyNavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
 import About from "./components/pages/About";
 import Projects from "./components/pages/Projects";
 import Stack from "./components/pages/Stack";
