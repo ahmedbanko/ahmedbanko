@@ -1,5 +1,5 @@
-import StackItem from "./StackItem";
-import { STACK_ITEMS } from "../data";
+import StackItem from "../StackItem";
+import { STACK_ITEMS } from "../../data";
 
 export default function Stack() {
   return (

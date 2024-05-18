@@ -1,4 +1,4 @@
-export default function StackItem({ item, ...props }) {
+export default function StackItem({ item }) {
   const { url, imgName, title, subtitle } = item;
   return (
     <div className="flex">

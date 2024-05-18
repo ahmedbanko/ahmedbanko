@@ -1,4 +1,4 @@
-import { WHY_ME } from "../data";
+import { WHY_ME } from "../../data";
 
 export default function WhyMe() {
   return (

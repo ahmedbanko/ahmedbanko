@@ -1,48 +1,33 @@
 import NavBar from "./components/MyNavBar";
-import { useState, useEffect } from "react";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import { ABOUT_STATEMENT } from "./data";
-import Stack from "./components/Stack";
-import Education from "./components/Education";
-import WhyMe from "./components/WhyMe";
-import Contact from "./components/Contact";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./components/pages/About";
+import Projects from "./components/pages/Projects";
+import Stack from "./components/pages/Stack";
+import Education from "./components/pages/Education";
+import WhyMe from "./components/pages/WhyMe";
+import PageNotFound from "./components/pages/PageNotFound";
+import Contact from "./components/pages/Contact";
+import { useTheme } from "./context/ThemeContext";
 
 function App() {
-  const [isDark, setIsDark] = useState(true);
-  const [selectedTab, setSelectedTab] = useState("{ A Banko }");
-
-  function handleTabSelection(target) {
-    setSelectedTab(target);
-  }
-
-  function handleSetDark() {
-    setIsDark((prevVal) => !prevVal);
-    document.body.classList.toggle("dark");
-  }
-
-  const contentMap = {
-    "{ A Banko }": <About />,
-    projects: <Projects />,
-    stack: <Stack />,
-    education: <Education />,
-    "why hire me?": <WhyMe />,
-    contact: <Contact />,
-  };
-
+  const { isDark } = useTheme();
   return (
-    <>
-      <NavBar
-        toggleIsDark={handleSetDark}
-        onSelectTab={handleTabSelection}
-        selectedTab={selectedTab}
-      />
+    <Router>
+      <NavBar />
       <div className="flex justify-center my-10 md:my-20">
         <div className="w-screen max-w-3xl mx-4 md:mx-0 p-6 rounded-xl bg-bodyBg-light bg-opacity-90 dark:bg-opacity-90 dark:bg-bodyBg-dark mb-10 md:mb-20">
-          {contentMap[selectedTab]}
+          <Routes>
+            <Route path="/" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/stack" element={<Stack />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/why-me" element={<WhyMe />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
         </div>
       </div>
-    </>
+    </Router>
   );
 }
 

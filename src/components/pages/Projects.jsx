@@ -1,5 +1,5 @@
-import { PROJECTS } from "../data.js";
-import ProjectItem from "./ProjectItem.jsx";
+import { PROJECTS } from "../../data.js";
+import ProjectItem from "../ProjectItem.jsx";
 export default function Projects() {
   return (
     <>
